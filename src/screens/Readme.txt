@@ -1,1 +1,2 @@
 アプリの画面を構成する　Screens>Components>Elements
+ページ単位を格納
