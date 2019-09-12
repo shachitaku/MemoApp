@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   memoEditInput: {
-    backgroundColor: '#ddd',
+    backgroundColor: '#fff',
     paddingTop: 32,
     paddingLeft: 16,
     paddingRight: 16,
