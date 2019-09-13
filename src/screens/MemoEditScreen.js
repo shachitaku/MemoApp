@@ -5,10 +5,11 @@ import CircleButton from '../elements/CircleButton';
 
 class MemoEditScreen extends React.Component {
   render() {
+    const { navigation } = this.props;
     return (
       <View style={styles.container}>
         <TextInput style={styles.memoEditInput} multiline value="Hi" />
-        <CircleButton name="check" />
+        <CircleButton name="check" onPress={() => { navigation.goBack(); }} />
       </View>
     );
   }
