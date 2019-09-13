@@ -1,6 +1,7 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import firebase from 'firebase';
+import 'firebase/firestore';
 
 import MemoListScreen from './src/screens/MemoListScreen';
 import MemoDetailScreen from './src/screens/MemoDetailScreen';
@@ -9,6 +10,8 @@ import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
 
 import ENV from './env.json';
+
+require('firebase/firestore');
 
 // Your web app's Firebase configuration
 const config = {
@@ -22,11 +25,10 @@ const config = {
 };
 firebase.initializeApp(config);
 
-
 const App = createStackNavigator({
+  Home:       { screen: MemoListScreen },
   Login:      { screen: LoginScreen },
   Signup:     { screen: SignupScreen },
-  Home:       { screen: MemoListScreen },
   MemoDetail: { screen: MemoDetailScreen },
   MemoEdit:   { screen: MemoEditScreen },
 }, { // デフォルト設定(全てに適用)
