@@ -7,10 +7,12 @@ import CircleButton from '../elements/CircleButton';
 
 class MemoListScreen extends React.Component {
   handlePress() {
-    console.log('hi');
-    // const ref = firebase.firestore().collection('messages');
-    // console.log(ref);
     const db = firebase.firestore();
+
+    console.log('hi');
+
+    const ref = firebase.firestore().collection('messages');
+    console.log(ref);
 
     db.collection('memos').add({
       body: 'test memo',
